@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Lobster&family=Lora:wght@400;500;600&family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@100;200;300;400;500&family=Pushster&family=Roboto+Condensed:wght@400;700&family=Waterfall&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+nav{
+    display: flex;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    justify-content: space-between;
+    padding:  .5% 2%;
+    align-items: baseline;
+    background-color: #181734;
+    color: white;
+    height: 10vh;
+    width: 100%;
+    @media screen and(max-width:900px) {
+        padding:  5% 3%;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        @media screen and(max-width:1100px) {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            gap: 0;
+            flex-direction: column;
+            background-color: #181734;
+            width: 100%;
+            text-align: center;
+            transition: .3s;
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            @media screen and(max-width:1100px) {
+               margin: 2%;
+            }
+        }.dropdown:hover{
+            border-bottom: 5px solid goldenrod;
+            padding-bottom: 1%;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            margin-top: 22%;
+            display: none;
+            position: absolute;
+            background-color: #181734;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          }
+          
+          /* Links inside the dropdown */
+          .dropdown-content a {
+            color: goldenrod;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+          
+          /* Change color of dropdown links on hover */
+          .dropdown-content a:hover {background-color: #ddd;}
+          
+          /* Show the dropdown menu on hover */
+          .dropdown:hover .dropdown-content {display: block;}
+    }
+    ul.active{
+        left: 0;
+    }
+    .left{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @media screen and(max-width:1100px) {
+            font-size: .7rem;
+        }
+        @media screen and(max-width:900px) {
+            justify-content: flex-start;
+            font-size: .5rem;
+            width: 50%;
+            padding: 2%;
+        }
+        .logo{
+            height: 5vh;
+            width: 30%;
+            background: url('https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png')no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+            position: relative;
+        }
+    }
+    .right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        .cart{
+            height: 10%;
+            width: 5%;
+            // position: relative;
+            cursor: pointer;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        input{
+            padding: 4%;
+            background: transparent;
+            border: solid 1px white;
+            @media screen and(max-width:900px) {
+                display: none;
+            }
+        }
+        input::placeholder{
+            color: #fff;
+            padding: 4%;
+        }
+    }
+    .harmburger{
+        cursor: pointer;
+        display: none;
+        @media screen and(max-width:1100px) {
+            display: block;
+        }
+        .bar{
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            background-color: #fff;
+        }
+    }
+    .harmburger.active .bar:nth-child(2){
+        @media screen and(max-width:1100px) {
+            opacity: 0;
+        }
+    }
+    .harmburger.active .bar:nth-child(1){
+        @media screen and(max-width:1100px) {
+            transform: translateY(8px) rotate(45deg);
+        }
+    }
+    .harmburger.active .bar:nth-child(3){
+        @media screen and(max-width:1100px) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+}
+header{
+    color: #181734;
+    background-color: goldenrod;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+.containerOne{
+    height: 60vh;
+    width: 100%;
+    background: url('https://store.fcbarcelona.com/medias/BANNER-TIENDA-EQUIPACION.jpg?context=bWFzdGVyfHJvb3R8MTIzODE4fGltYWdlL2pwZWd8aGNlL2g1ZC84OTE0MjQ5MTU0NTkwL0JBTk5FUiBUSUVOREEgRVFVSVBBQ0lPTi5qcGd8YTg3YjQ4MmNiMGQ4ZTIxZDM3MWQ3YmVhOWQ3NGY3MjExNzlkOTE1ZTdlY2VhYWFlZWU5MjYwNzQ1MTdlMzk0Yg')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    position: relative;
+    background-color: #181734;
+    padding: 4%;
+    font-size: 3vw;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    @media screen and(max-width:900px) {
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain; 
+        height: 15vh;
+        // margin-bottom: -10%;
+    }
+    a{
+        display: block;
+        margin-top: 2%;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 100;
+    }
+}
+.containerTwo{
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-left: 2%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    @media screen and(max-width:900px) {
+        height: 30vh;
+    }
+    .flexItems{
+        height: 50vh;
+        background-color: white;
+        min-width: 25%;
+        @media screen and(max-width:900px) {
+            height: 50vh;
+        }
+        img{
+            height: 95%;
+            width: 100%;
+            object-fit: contain;
+        }
+        p{
+            color: rgb(126, 108, 108);
+            font-size: .9rem;
+            @media screen and(max-width:900px) {
+                font-size: .6rem;
+                margin-top: -120%;
+            }
+        }
+        h1{
+            color: rgb(31, 29, 29);
+            font-size: 1.2rem;
+            font-weight: 300;
+            @media screen and(max-width:900px) {
+                font-size: .7rem;
+
+            }
+        }
+    }
+}
+.containerThree{
+    height: 50vh;
+    width: 100%;
+    background: url('https://store.fcbarcelona.com/medias/FCB-XMAS-JUMPER-BANNER-NAVIDAD-OK-Desktop-1460x456px.jpg?context=bWFzdGVyfHJvb3R8MTc2MjU5fGltYWdlL2pwZWd8aDhiL2g4My84OTE4NzQxMzg1MjQ2L0ZDQi1YTUFTIEpVTVBFUiBCQU5ORVItTkFWSURBRC1PS19EZXNrdG9wLTE0NjB4NDU2cHguanBnfDQ4YjVlZTlhOGQwYzRmNzA2MTI4MGRiODRlNTk0MzMyNWY0NWU0OTQyNTg3NDAzMTgxN2UzZDAxZGQ1NmMzNDc')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    position: relative;
+    background-color: #181734;
+    padding: 4%;
+    font-size: 3vw;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    @media screen and(max-width:900px) {
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain; 
+        height: 15vh;
+        // margin-bottom: -10%;
+    }
+    a{
+        display: block;
+        margin-top: 2%;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 100;
+    }
+}
+.containerFive{
+    height: 50vh;
+    width: 100%;
+    background: url('https://store.fcbarcelona.com/medias/BANNER-TIENDA-regalos-eng.jpg?context=bWFzdGVyfHJvb3R8MTM2MzQ2fGltYWdlL2pwZWd8aGVmL2hkOS84OTE5MDUxNTAxNTk4L0JBTk5FUi1USUVOREEtX3JlZ2Fsb3NfZW5nLmpwZ3wxMTAwNTBlNDllYzk4YmYzMThmZWQzOTg1Y2E0MjgwZWJjMTQ4OGUwZjEyYTUwZmQ3MGUzNjNiMWRiY2JiOTFm')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    position: relative;
+    cursor: pointer;
+    @media screen and(max-width:900px) {
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain; 
+        height: 15vh;
+        background-color: #181734;
+        // margin-bottom: -10%;
+    }
+}
+.containerSix{
+    height: 50vh;
+    width: 100%;
+    background: url('https://store.fcbarcelona.com/medias/BANNER-TIENDA-NAVIDAD-KIDS-azul.jpg?context=bWFzdGVyfHJvb3R8OTMxNjh8aW1hZ2UvanBlZ3xoZGQvaDU1Lzg5MTQyNjA2MjMzOTAvQkFOTkVSIFRJRU5EQSBOQVZJREFEIEtJRFNfYXp1bC5qcGd8YTQyZjMyYTRmYzhiYjAyYWY0MjMzYmM5NTJmZGExNDU4NzAwNzBhN2Y5NTQwOTU3MTM3ZmFjMTljNjJkYTA5Yw')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    position: relative;
+    background-color: #181734;
+    padding: 4%;
+    font-size: 3vw;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    @media screen and(max-width:900px) {
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain; 
+        height: 15vh;
+        // margin-bottom: -10%;
+    }
+    a{
+        display: block;
+        margin-top: 2%;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 100;
+    }
+}
+.containerSeven{
+    height: 50vh;
+    width: 100%;
+    background: url('https://store.fcbarcelona.com/medias/BANNER-TIENDA-HOMBRE.jpg?context=bWFzdGVyfHJvb3R8MTMyODM3fGltYWdlL2pwZWd8aDY2L2gwOC84OTE0MjU2ODg3ODM4L0JBTk5FUi1USUVOREEtSE9NQlJFLmpwZ3wzNGRiYWY3OWY1OGY2MmMyMDk5MTcyOTRkZTU5ZGYwZGY5ZjQ1ZDM3MzFmNjMyMmM5YTc1YTAxMzQwYWMzNjlk')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    position: relative;
+    background-color: #181734;
+    padding: 4%;
+    font-size: 3vw;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    @media screen and(max-width:900px) {
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain; 
+        height: 15vh;
+        // margin-bottom: -10%;
+    }
+    a{
+        display: block;
+        margin-top: 2%;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 100;
+    }
+}
+.containerEight{
+    margin-top: 4%;
+    height: 50vh;
+    width: 100%;
+    background: url('https://store.fcbarcelona.com/medias/BANNER-TIENDA-ENTRENAMIENTO-desktop-new.jpg?context=bWFzdGVyfHJvb3R8MTAxODkzfGltYWdlL2pwZWd8aGFjL2gxOS84OTE0MjUxMzgyODE0L0JBTk5FUl9USUVOREFfRU5UUkVOQU1JRU5UT19kZXNrdG9wIG5ldy5qcGd8YzViY2M3YTQ2ZjVmMDMzNWU1MGI5N2Q0ZjgyZWNhZTQ3YzU1OTYwY2NmMGQ0YTRmNjBkMWFjM2VlZGFlOTZiOA')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    position: relative;
+    background-color: #181734;
+    padding: 4%;
+    font-size: 3vw;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    @media screen and(max-width:900px) {
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain; 
+        height: 15vh;
+        // margin-bottom: -10%;
+    }
+    a{
+        display: block;
+        margin-top: 2%;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 100;
+    }
+}
+.containerNine{
+    margin-top: 4%;
+    height: 50vh;
+    width: 100%;
+    background: url('https://store.fcbarcelona.com/medias/BANNER-TIENDA-mujer.jpg?context=bWFzdGVyfHJvb3R8MTIwNTI1fGltYWdlL2pwZWd8aDNhL2g3ZC84OTE0MjYzMTc5Mjk0L0JBTk5FUi1USUVOREEtbXVqZXIuanBnfDhkNTdjMDY2ZTY2NGQzNTFkM2FkNzg3NjYxYmZlMjRiOWJmMWExZTQxN2IwZjU4NmQ0MTY5ZGNmNGJiNDc5M2E')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    position: relative;
+    background-color: #181734;
+    padding: 4%;
+    font-size: 3vw;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    @media screen and(max-width:900px) {
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain; 
+        height: 15vh;
+        // margin-bottom: -10%;
+    }
+    a{
+        display: block;
+        margin-top: 2%;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 100;
+    }
+}
+.lastContainer{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.items1{
+    height: 80%;
+    flex: 3;
+    background: url('https://store.fcbarcelona.com/medias/MiniBanners-1.jpg?context=bWFzdGVyfHJvb3R8MTE3NDc2fGltYWdlL2pwZWd8aDEyL2gyNi84OTExNTk0NDg3ODM4L01pbmlCYW5uZXJzXzEuanBnfGQ2OTIwYzFkZDBlZjk4NDZjYTA1ZjdhMTZlNDY0YjNkNzRhOWI1N2Q0NzIzMWIwY2RiNmNjYzYwYzA2N2EwMjc')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12%;
+   span{
+    background-color: #fff;
+    width: 90%;
+    padding: 5%;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+   }
+}
+.items2{
+    height: 80%;
+    flex: 3;
+    background: url('https://store.fcbarcelona.com/medias/BANNER-TIENDA-mujer.jpg?context=bWFzdGVyfHJvb3R8MTIwNTI1fGltYWdlL2pwZWd8aDNhL2g3ZC84OTE0MjYzMTc5Mjk0L0JBTk5FUi1USUVOREEtbXVqZXIuanBnfDhkNTdjMDY2ZTY2NGQzNTFkM2FkNzg3NjYxYmZlMjRiOWJmMWExZTQxN2IwZjU4NmQ0MTY5ZGNmNGJiNDc5M2E')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12%;
+   span{
+    background-color: #fff;
+    width: 90%;
+    padding: 5%;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+   }
+}
+.items3{
+    height: 80%;
+    flex: 3;
+    background: url('https://store.fcbarcelona.com/medias/BANNER-TIENDA-HOMBRE.jpg?context=bWFzdGVyfHJvb3R8MTMyODM3fGltYWdlL2pwZWd8aDY2L2gwOC84OTE0MjU2ODg3ODM4L0JBTk5FUi1USUVOREEtSE9NQlJFLmpwZ3wzNGRiYWY3OWY1OGY2MmMyMDk5MTcyOTRkZTU5ZGYwZGY5ZjQ1ZDM3MzFmNjMyMmM5YTc1YTAxMzQwYWMzNjlk')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12%;
+   span{
+    background-color: #fff;
+    width: 90%;
+    padding: 5%;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+   }
+}
+.items4{
+    height: 80%;
+    flex: 3;
+    background: url('https://store.fcbarcelona.com/medias/MiniBanners-4.jpg?context=bWFzdGVyfHJvb3R8MTE2NDk5fGltYWdlL2pwZWd8aDkzL2hjMi84OTExODc3NDcyMjg2L01pbmlCYW5uZXJzXzQuanBnfGEzMmZlNGM1MzU3OGQ4NjdlNTkwNDY2NWVjOWUxYjIxYjQ4Zjg0YTAxMDE1MTZlMjZkZjFmMTk3ZmQzYmY4NjE')no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12%;
+   span{
+    background-color: #fff;
+    width: 90%;
+    padding: 5%;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+   }
+}
+footer{
+    height: 70vh;
+    width: 100%;
+    background-color: #181734;
+    display: flex;
+    padding: 6%;
+    justify-content: center;
+    color: #fff;
+    .one{
+        flex: 6;
+        margin-left: 10%;
+        ul{
+            list-style: none;
+            padding-top: 5%;
+            li{
+                margin-top: 7%;
+                font-size: .8rem;
+                font-weight: 100;
+            }
+        }
+    }
+    .two{
+        flex: 6;
+        li{
+            margin-top: 7%;
+            font-size: .8rem;
+            font-weight: 100;
+            list-style: none;
+        }
+    }
+    .three{
+        flex: 6;
+        .icons{
+            display: flex;
+            justify-content: start;
+            height: 100%;
+            .facebook{
+                height: 10%;
+                width: 10%;
+                background-color: #fff;
+                border-radius: 50%;
+                background: url('https://img.icons8.com/nolan/344/facebook-new.png')no-repeat center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover; 
+                cursor: pointer;
+                position: relative;
+            }
+            .twitter{
+                height: 10%;
+                width: 10%;
+                background-color: #fff;
+                border-radius: 50%;
+                background: url('https://img.icons8.com/nolan/452/twitter.png')no-repeat center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover; 
+                position: relative;
+                cursor: pointer;
+            }
+            .instagram{
+                height: 10%;
+                width: 10%;
+                background-color: #fff;
+                border-radius: 50%;              
+                background: url('https://img.icons8.com/nolan/344/instagram-new.png')no-repeat center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover; 
+                position: relative;
+                cursor: pointer;
+            }
+        }
+        
+    }
+}
