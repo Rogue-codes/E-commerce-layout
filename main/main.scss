@@ -101,12 +101,15 @@ nav{
         .logo{
             height: 5vh;
             width: 30%;
-            background: url('https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png')no-repeat center center;
+            background: url('https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png')no-repeat center;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover; 
             position: relative;
+            @media screen and(max-width:900px) {
+                height: 6vh;
+            }
         }
     }
     .right{
@@ -225,7 +228,7 @@ header{
     }
     .flexItems{
         height: 50vh;
-        background-color: white;
+        background-color: #f0f0f0;
         min-width: 25%;
         @media screen and(max-width:900px) {
             height: 50vh;
@@ -437,10 +440,12 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 .items1{
     height: 80%;
-    flex: 3;
+    min-width: 25%;
     background: url('https://store.fcbarcelona.com/medias/MiniBanners-1.jpg?context=bWFzdGVyfHJvb3R8MTE3NDc2fGltYWdlL2pwZWd8aDEyL2gyNi84OTExNTk0NDg3ODM4L01pbmlCYW5uZXJzXzEuanBnfGQ2OTIwYzFkZDBlZjk4NDZjYTA1ZjdhMTZlNDY0YjNkNzRhOWI1N2Q0NzIzMWIwY2RiNmNjYzYwYzA2N2EwMjc')no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -451,6 +456,7 @@ header{
     justify-content: center;
     align-items: center;
     padding-top: 12%;
+    c
    span{
     background-color: #fff;
     width: 90%;
@@ -462,6 +468,7 @@ header{
 }
 .items2{
     height: 80%;
+    min-width: 25%;
     flex: 3;
     background: url('https://store.fcbarcelona.com/medias/BANNER-TIENDA-mujer.jpg?context=bWFzdGVyfHJvb3R8MTIwNTI1fGltYWdlL2pwZWd8aDNhL2g3ZC84OTE0MjYzMTc5Mjk0L0JBTk5FUi1USUVOREEtbXVqZXIuanBnfDhkNTdjMDY2ZTY2NGQzNTFkM2FkNzg3NjYxYmZlMjRiOWJmMWExZTQxN2IwZjU4NmQ0MTY5ZGNmNGJiNDc5M2E')no-repeat center center;
     -webkit-background-size: cover;
@@ -473,6 +480,9 @@ header{
     justify-content: center;
     align-items: center;
     padding-top: 12%;
+    @media screen and(max-width:900px) {
+        min-width: 75%;
+    }
    span{
     background-color: #fff;
     width: 90%;
@@ -484,6 +494,7 @@ header{
 }
 .items3{
     height: 80%;
+    min-width: 25%;
     flex: 3;
     background: url('https://store.fcbarcelona.com/medias/BANNER-TIENDA-HOMBRE.jpg?context=bWFzdGVyfHJvb3R8MTMyODM3fGltYWdlL2pwZWd8aDY2L2gwOC84OTE0MjU2ODg3ODM4L0JBTk5FUi1USUVOREEtSE9NQlJFLmpwZ3wzNGRiYWY3OWY1OGY2MmMyMDk5MTcyOTRkZTU5ZGYwZGY5ZjQ1ZDM3MzFmNjMyMmM5YTc1YTAxMzQwYWMzNjlk')no-repeat center center;
     -webkit-background-size: cover;
@@ -495,6 +506,9 @@ header{
     justify-content: center;
     align-items: center;
     padding-top: 12%;
+    @media screen and(max-width:900px) {
+        min-width: 75%;
+    }
    span{
     background-color: #fff;
     width: 90%;
@@ -506,6 +520,7 @@ header{
 }
 .items4{
     height: 80%;
+    min-width: 25%;
     flex: 3;
     background: url('https://store.fcbarcelona.com/medias/MiniBanners-4.jpg?context=bWFzdGVyfHJvb3R8MTE2NDk5fGltYWdlL2pwZWd8aDkzL2hjMi84OTExODc3NDcyMjg2L01pbmlCYW5uZXJzXzQuanBnfGEzMmZlNGM1MzU3OGQ4NjdlNTkwNDY2NWVjOWUxYjIxYjQ4Zjg0YTAxMDE1MTZlMjZkZjFmMTk3ZmQzYmY4NjE')no-repeat center center;
     -webkit-background-size: cover;
@@ -517,6 +532,9 @@ header{
     justify-content: center;
     align-items: center;
     padding-top: 12%;
+    @media screen and(max-width:900px) {
+        min-width: 75%;
+    }
    span{
     background-color: #fff;
     width: 90%;
@@ -534,6 +552,10 @@ footer{
     padding: 6%;
     justify-content: center;
     color: #fff;
+    @media screen and(max-width:900px) {
+        flex-direction: column;
+        height: 100vh;
+    }
     .one{
         flex: 6;
         margin-left: 10%;
@@ -549,6 +571,10 @@ footer{
     }
     .two{
         flex: 6;
+        @media screen and(max-width:900px) {
+            margin-left: 10%;
+            margin-top: 5%;
+        }
         li{
             margin-top: 7%;
             font-size: .8rem;
@@ -558,6 +584,10 @@ footer{
     }
     .three{
         flex: 6;
+        @media screen and(max-width:900px) {
+            margin-left: 10%;
+            margin-top: -25%;
+        }
         .icons{
             display: flex;
             justify-content: start;
