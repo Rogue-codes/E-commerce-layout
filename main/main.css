@@ -284,6 +284,13 @@ header {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 700;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    font-size: .7rem;
+  }
 }
 
 .containerOne {
@@ -304,6 +311,7 @@ header {
   .containerOne {
     background-size: contain;
     height: 15vh;
+    font-size: 1.2rem;
   }
 }
 
@@ -313,6 +321,12 @@ header {
   font-size: 1.2rem;
   color: white;
   font-weight: 100;
+}
+
+@media screen and (max-width: 900px) {
+  .containerOne a {
+    font-size: .7rem;
+  }
 }
 
 .containerTwo {
@@ -399,6 +413,7 @@ header {
   .containerThree {
     background-size: contain;
     height: 15vh;
+    font-size: 1.2rem;
   }
 }
 
@@ -408,6 +423,12 @@ header {
   font-size: 1.2rem;
   color: white;
   font-weight: 100;
+}
+
+@media screen and (max-width: 900px) {
+  .containerThree a {
+    font-size: .7rem;
+  }
 }
 
 .containerFive {
@@ -445,6 +466,7 @@ header {
   .containerSix {
     background-size: contain;
     height: 15vh;
+    font-size: 1.2rem;
   }
 }
 
@@ -454,6 +476,12 @@ header {
   font-size: 1.2rem;
   color: white;
   font-weight: 100;
+}
+
+@media screen and (max-width: 900px) {
+  .containerSix a {
+    font-size: .7rem;
+  }
 }
 
 .containerSeven {
@@ -474,6 +502,7 @@ header {
   .containerSeven {
     background-size: contain;
     height: 15vh;
+    font-size: 1.2rem;
   }
 }
 
@@ -483,6 +512,12 @@ header {
   font-size: 1.2rem;
   color: white;
   font-weight: 100;
+}
+
+@media screen and (max-width: 900px) {
+  .containerSeven a {
+    font-size: .7rem;
+  }
 }
 
 .containerEight {
@@ -504,6 +539,7 @@ header {
   .containerEight {
     background-size: contain;
     height: 15vh;
+    font-size: 1.2rem;
   }
 }
 
@@ -513,6 +549,12 @@ header {
   font-size: 1.2rem;
   color: white;
   font-weight: 100;
+}
+
+@media screen and (max-width: 900px) {
+  .containerEight a {
+    font-size: .7rem;
+  }
 }
 
 .containerNine {
@@ -534,6 +576,7 @@ header {
   .containerNine {
     background-size: contain;
     height: 15vh;
+    font-size: 1.2rem;
   }
 }
 
@@ -543,6 +586,12 @@ header {
   font-size: 1.2rem;
   color: white;
   font-weight: 100;
+}
+
+@media screen and (max-width: 900px) {
+  .containerNine a {
+    font-size: .7rem;
+  }
 }
 
 .lastContainer {
@@ -579,8 +628,13 @@ header {
   padding-top: 12%;
 }
 
-.items1 c
-span {
+@media screen and (max-width: 900px) {
+  .items1 {
+    min-width: 75%;
+  }
+}
+
+.items1 span {
   background-color: #fff;
   width: 90%;
   padding: 5%;

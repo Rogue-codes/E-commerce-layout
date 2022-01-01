@@ -182,6 +182,10 @@ header{
     justify-content: center;
     align-items: center;
     font-weight: 700;
+    font-size: 1.5rem;
+    @media screen and(max-width:900px) {
+        font-size: .7rem;
+    }
 }
 .containerOne{
     height: 60vh;
@@ -204,7 +208,7 @@ header{
         -o-background-size: contain;
         background-size: contain; 
         height: 15vh;
-        // margin-bottom: -10%;
+        font-size: 1.2rem;
     }
     a{
         display: block;
@@ -212,6 +216,9 @@ header{
         font-size: 1.2rem;
         color: white;
         font-weight: 100;
+        @media screen and(max-width:900px) {
+            font-size: .7rem;
+        }
     }
 }
 .containerTwo{
@@ -278,6 +285,7 @@ header{
         -o-background-size: contain;
         background-size: contain; 
         height: 15vh;
+        font-size: 1.2rem;
         // margin-bottom: -10%;
     }
     a{
@@ -286,6 +294,9 @@ header{
         font-size: 1.2rem;
         color: white;
         font-weight: 100;
+        @media screen and(max-width:900px) {
+            font-size: .7rem;
+        }
     }
 }
 .containerFive{
@@ -329,7 +340,7 @@ header{
         -o-background-size: contain;
         background-size: contain; 
         height: 15vh;
-        // margin-bottom: -10%;
+        font-size: 1.2rem;
     }
     a{
         display: block;
@@ -337,6 +348,9 @@ header{
         font-size: 1.2rem;
         color: white;
         font-weight: 100;
+        @media screen and(max-width:900px) {
+            font-size: .7rem;
+        }
     }
 }
 .containerSeven{
@@ -359,8 +373,8 @@ header{
         -moz-background-size: contain;
         -o-background-size: contain;
         background-size: contain; 
-        height: 15vh;
-        // margin-bottom: -10%;
+        height: 15vh;font-size: 1.2rem;
+
     }
     a{
         display: block;
@@ -368,6 +382,9 @@ header{
         font-size: 1.2rem;
         color: white;
         font-weight: 100;
+        @media screen and(max-width:900px) {
+            font-size: .7rem;
+        }
     }
 }
 .containerEight{
@@ -392,7 +409,7 @@ header{
         -o-background-size: contain;
         background-size: contain; 
         height: 15vh;
-        // margin-bottom: -10%;
+        font-size: 1.2rem;
     }
     a{
         display: block;
@@ -400,6 +417,9 @@ header{
         font-size: 1.2rem;
         color: white;
         font-weight: 100;
+        @media screen and(max-width:900px) {
+            font-size: .7rem;
+        }
     }
 }
 .containerNine{
@@ -424,7 +444,7 @@ header{
         -o-background-size: contain;
         background-size: contain; 
         height: 15vh;
-        // margin-bottom: -10%;
+        font-size: 1.2rem;
     }
     a{
         display: block;
@@ -432,6 +452,9 @@ header{
         font-size: 1.2rem;
         color: white;
         font-weight: 100;
+        @media screen and(max-width:900px) {
+            font-size: .7rem;
+        }
     }
 }
 .lastContainer{
@@ -456,7 +479,9 @@ header{
     justify-content: center;
     align-items: center;
     padding-top: 12%;
-    c
+    @media screen and(max-width:900px) {
+        min-width: 75%;
+    }
    span{
     background-color: #fff;
     width: 90%;
